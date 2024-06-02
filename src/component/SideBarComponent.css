@@ -1,0 +1,18 @@
+.sidebar {
+  position: absolute;
+  top: 4rem;
+  margin: 1rem 0;
+  height: calc(100% - 6rem);
+  width: 350px;
+  left: 2rem;
+}
+
+.sidebar-img-container {
+  margin: 1rem 0;
+}
+
+.sidebar-img {
+  /* max-height: 30rem; */
+  max-height: 30rem;
+  border-radius: 2rem;
+}

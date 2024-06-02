@@ -1,6 +1,7 @@
 import React from "react";
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import SideBar from "./component/SideBarComponent";
 import Navbar from "./component/Navbar";
 function App() {
   const [theme, colorMode] = useMode();
@@ -10,14 +11,10 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <p>color</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
-            aliquid facilis corrupti officia possimus deserunt placeat error
-            soluta at earum! Exercitationem nobis numquam nisi laudantium odio
-            eveniet autem nulla laborum.
-          </p>
-          <Navbar />
+          <main className="flex gap-2">
+            <SideBar />
+            <Navbar />
+          </main>
         </div>
       </ThemeProvider>
     </ColorModeContext.Provider>
