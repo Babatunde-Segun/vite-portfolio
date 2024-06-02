@@ -5,3 +5,32 @@ body,
   width: 100%;
   height: 100%;
 }
+
+/* The entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* The scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* The draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+/* The scrollbar thumb when being hovered by the mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+}
+
+.app {
+  /* height: 100vh; */
+  /* position: relative; */
+  overflow-y: scroll;
+  display: flex;
+}

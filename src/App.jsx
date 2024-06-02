@@ -11,8 +11,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+          <SideBar />
           <main className="flex gap-2">
-            <SideBar />
             <Navbar />
           </main>
         </div>
