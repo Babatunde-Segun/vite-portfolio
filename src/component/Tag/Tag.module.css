@@ -1,0 +1,10 @@
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #5e5e5e33;
+  color: red;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50rem;
+  border: 1px solid gray;
+}
