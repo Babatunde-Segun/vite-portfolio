@@ -3,6 +3,7 @@ import Navbar from "../NavbarThing/NavbarContainer";
 import Tag from "../Tag/Tag";
 import Button from "../Button/Button";
 import "./Home.css";
+import ProjectsBtn from "../ProjectsBtn";
 
 function Home() {
   return (
@@ -10,18 +11,22 @@ function Home() {
       <Navbar />
 
       <div className="home-main-content">
-        <Tag>Let's talk</Tag>
-
         <div>
-          <h1 className="home-primary-header">
-            I'm Babatunde Segun <br />A Software <span>Developer</span>
-          </h1>
+          <Tag>Let's talk</Tag>
+
+          <div>
+            <h1 className="home-primary-header">
+              I'm Babatunde Segun <br />A Software <span>Developer</span>
+            </h1>
+          </div>
+
+          <div className="home-btn-container">
+            <Button width="10rem">My Works</Button>
+            <Button width="10rem">CV</Button>
+          </div>
         </div>
 
-        <div className="home-btn-container">
-          <Button width="10rem">My Works</Button>
-          <Button width="10rem">CV</Button>
-        </div>
+        <ProjectsBtn />
       </div>
     </section>
   );

@@ -11,9 +11,16 @@
 
 .home-main-content {
   margin-top: 15rem;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
 }
 
 .home-btn-container {
   display: flex;
   gap: 2rem;
+}
+
+.projectBtn {
+  animation: spin 6s linear infinite;
 }
