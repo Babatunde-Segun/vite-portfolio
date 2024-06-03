@@ -2,7 +2,7 @@ import React from "react";
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import SideBar from "./component/SideBarComponent";
-import Navbar from "./component/Navbar";
+import Navbar from "./component/NavbarThing/NavbarContainer";
 import Home from "./component/Section/Home";
 function App() {
   const [theme, colorMode] = useMode();
@@ -13,7 +13,7 @@ function App() {
         <CssBaseline />
         <div className="app">
           <SideBar />
-          <main className="flex gap-2">
+          <main className="main">
             <Home />
           </main>
         </div>

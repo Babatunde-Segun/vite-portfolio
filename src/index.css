@@ -33,4 +33,10 @@ body,
   /* position: relative; */
   overflow-y: scroll;
   display: flex;
+  gap: 4rem;
+}
+
+.main {
+  margin: 1rem 0 10px 350px;
+  width: 100%;
 }

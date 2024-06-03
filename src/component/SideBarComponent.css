@@ -1,5 +1,5 @@
 .sidebar {
-  position: sticky;
+  position: fixed;
   /* top: rem; */
   left: 2rem;
   margin: 1rem 0;

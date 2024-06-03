@@ -1,0 +1,19 @@
+.home-primary-header {
+  margin: 1rem 0 2rem;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+
+.home-primary-header span {
+  color: orangered;
+}
+
+.home-main-content {
+  margin-top: 15rem;
+}
+
+.home-btn-container {
+  display: flex;
+  gap: 2rem;
+}
