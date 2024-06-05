@@ -11,7 +11,7 @@ import roundedText from "../assets/rounded-text.png";
 import { HiArrowRight } from "react-icons/hi2";
 import { HiArrowLongDown } from "react-icons/hi2";
 {
-  /* <HiArrowLongDown />; */
+  /* <HiArrowLongDown />; needed for down btn */
 }
 
 const ProjectsBtn = () => {
