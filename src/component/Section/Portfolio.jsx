@@ -12,20 +12,24 @@ const portfolioArray = [
   {
     name: "title 1",
     src: thumb1,
+    href: "https://house-marketplace-hzo0.onrender.com/",
     tags: ["node", "React"],
   },
   {
     name: "title 2",
+    href: "https://github-finder-alpha-six.vercel.app/",
     src: thumb2,
     tags: ["node", "JavaScript"],
   },
   {
+    href: "https://todo-app-fmge.onrender.com/",
     name: "title 3",
     src: thumb3,
     tags: ["react", "NextJS", "typescript"],
   },
   {
     name: "title 4",
+    href: "https://nextjs-food-project.vercel.app/",
     src: nextfoodfullscreen,
     tags: ["NextJS"],
   },
@@ -42,19 +46,21 @@ function Portfolio() {
       </h2>
 
       <div className="portfolio-array">
-        {portfolioArray.map((items) => (
-          <div className="portfolio-img-container">
+        {portfolioArray.map((items, index) => (
+          <Link to={items.href} className="portfolio-img-container" key={index}>
             <img src={items.src} alt={items.name} className="portfolio-img" />
             <div className="portfolio-details-container">
               <div className="portfolio-details-subcontainer">
                 {items.tags.length === 0
                   ? ""
-                  : items.tags.map((tag) => (
-                      <p className="portfolio-img-details">{tag}</p>
+                  : items.tags.map((tag, tagIndex) => (
+                      <p key={tagIndex} className="portfolio-img-details">
+                        {tag}
+                      </p>
                     ))}
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

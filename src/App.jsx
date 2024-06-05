@@ -5,6 +5,7 @@ import SideBar from "./component/SideBarComponent";
 import Navbar from "./component/NavbarThing/NavbarContainer";
 import Home from "./component/Section/Home";
 import Portfolio from "./component/Section/Portfolio";
+
 function App() {
   const [theme, colorMode] = useMode();
 

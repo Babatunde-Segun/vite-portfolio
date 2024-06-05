@@ -16,7 +16,8 @@
 .portfolio-array {
   margin-top: 2rem;
   display: grid;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   /* place-items: center; */
   max-width: 60rem;
