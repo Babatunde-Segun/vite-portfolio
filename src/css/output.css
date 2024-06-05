@@ -793,6 +793,11 @@ video {
   margin-bottom: 4rem;
 }
 
+.my-\[3rem\] {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-\[calc\(\(theme\(spacing\.5\)-theme\(spacing\.1\)\)\/2\)\] {
   margin-top: calc((1.25rem - 0.25rem) / 2);
   margin-bottom: calc((1.25rem - 0.25rem) / 2);
@@ -811,11 +816,6 @@ video {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.my-\[3rem\] {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 
 .-mr-2 {
@@ -842,6 +842,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-\[1rem\] {
+  margin-bottom: 1rem;
+}
+
 .mb-px {
   margin-bottom: 1px;
 }
@@ -864,14 +868,6 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-\[3rem\] {
-  margin-top: 3rem;
-}
-
-.mb-\[1rem\] {
-  margin-bottom: 1rem;
 }
 
 .box-border {
@@ -1704,14 +1700,6 @@ video {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-\[2rem\] {
-  gap: 2rem;
 }
 
 .gap-\[5rem\] {
@@ -2598,6 +2586,10 @@ video {
   font-size: 1.5rem;
 }
 
+.text-\[3rem\] {
+  font-size: 3rem;
+}
+
 .text-large {
   font-size: var(--nextui-font-size-large);
   line-height: var(--nextui-line-height-large);
@@ -2628,23 +2620,7 @@ video {
   line-height: 1.75rem;
 }
 
-.text-\[2rem\] {
-  font-size: 2rem;
-}
-
-.text-\[4rem\] {
-  font-size: 4rem;
-}
-
-.text-\[2\=3rem\] {
-  font-size: 2=3rem;
-}
-
-.text-\[3rem\] {
-  font-size: 3rem;
-}
-
-.font-bold {
+.font-\[700\] {
   font-weight: 700;
 }
 
@@ -2660,14 +2636,6 @@ video {
   font-weight: 600;
 }
 
-.font-\[600\] {
-  font-weight: 600;
-}
-
-.font-\[700\] {
-  font-weight: 700;
-}
-
 .tabular-nums {
   --tw-numeric-spacing: tabular-nums;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
@@ -2680,6 +2648,16 @@ video {
 .\!text-danger {
   --tw-text-opacity: 1 !important;
   color: hsl(var(--nextui-danger) / var(--nextui-danger-opacity, var(--tw-text-opacity))) !important;
+}
+
+.text-\[orangered\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 69 0 / var(--tw-text-opacity));
+}
+
+.text-\[white\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-background {
@@ -2850,16 +2828,6 @@ video {
 }
 
 .text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[orangered\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 69 0 / var(--tw-text-opacity));
-}
-
-.text-\[white\] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }

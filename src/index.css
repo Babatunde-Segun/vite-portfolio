@@ -40,3 +40,8 @@ body,
   margin: 1rem 0 10px 350px;
   width: 100%;
 }
+
+.primary-heading,
+.secondary-heading {
+  color: orangered;
+}
