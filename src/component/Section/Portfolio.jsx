@@ -4,6 +4,7 @@ import thumb1 from "../../assets/thumb1.jpg";
 import thumb2 from "../../assets/thumb2.jpg";
 import thumb3 from "../../assets/thumb3.jpg";
 import thumb4 from "../../assets/thumb4.jpg";
+import "./Portfolio.css";
 
 const portfolioArray = [
   {
@@ -25,7 +26,7 @@ const portfolioArray = [
 
 function Portfolio() {
   return (
-    <section id="portfolio">
+    <section id="portfolio" className="portfolio">
       <Tag>Portfolio</Tag>
 
       <h2 className="secondary-heading portfolio-secondary-heading">
@@ -40,7 +41,11 @@ function Portfolio() {
             {items.tags.length === 0
               ? ""
               : items.tags.map((tag) => (
-                  <p className="portfolio-img-details">{tag}</p>
+                  <div className="portfolio-details-container">
+                    <div className="portfolio-details-subcontainer">
+                      <p className="portfolio-img-details">{tag}</p>
+                    </div>
+                  </div>
                 ))}
           </div>
         ))}
