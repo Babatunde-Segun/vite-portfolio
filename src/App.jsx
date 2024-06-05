@@ -5,6 +5,7 @@ import SideBar from "./component/SideBarComponent";
 import Navbar from "./component/NavbarThing/NavbarContainer";
 import Home from "./component/Section/Home";
 import Portfolio from "./component/Section/Portfolio";
+import About from "./component/Section/About";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -18,6 +19,7 @@ function App() {
           <main className="main">
             <Home />
             <Portfolio />
+            <About />
           </main>
         </div>
       </ThemeProvider>

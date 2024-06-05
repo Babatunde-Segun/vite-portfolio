@@ -16,7 +16,12 @@ import { HiArrowLongDown } from "react-icons/hi2";
 
 const ProjectsBtn = () => {
   return (
-    <a href="#">
+    <a
+      href="#portfolio"
+      style={{
+        scrollBehavior: "smooth",
+      }}
+    >
       <div className="relative w-[30px] h-[38px] flex justify-center items-center  bg-cover bg-center bg-no-repeat group">
         <img
           src={roundedText}

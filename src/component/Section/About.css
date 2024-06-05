@@ -1,0 +1,40 @@
+.about-details-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.about-summary {
+  max-width: 60%;
+}
+
+.about-summary-details {
+  margin-bottom: 2rem;
+}
+
+.about-basic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.about-basic-info:hover {
+}
+
+.about-basic-info:hover p {
+  position: relative;
+  transition: all ease-in-out 0.9s;
+}
+
+.about-basic-info:hover p:hover {
+  /* padding-bottom: 4%; */
+  text-decoration: underline;
+  text-decoration-color: orangered;
+}
+
+.basic-h6 {
+  color: #766;
+}

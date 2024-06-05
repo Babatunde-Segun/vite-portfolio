@@ -1,12 +1,14 @@
+#portfolio {
+  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
+}
+
 .portfolio {
   margin-top: 4rem;
   padding-right: 2rem;
 }
 
 .portfolio-secondary-heading {
-  margin-top: 2rem;
-  font-size: 2rem;
-  line-height: 1;
 }
 
 .portfolio-secondary-heading span {
