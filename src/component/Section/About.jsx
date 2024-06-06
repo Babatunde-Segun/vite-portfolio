@@ -4,7 +4,18 @@ import "./About.css";
 import { Button } from "@nextui-org/react";
 import { LiaDownloadSolid } from "react-icons/lia";
 
-
+const aboutArray = [
+  {
+    h2: "Frontend Development",
+    tags: ["React", "NextJS", "TypeScript", "Daisy UI", "Next UI"],
+    p: "I build robust and scalable web applications using modern frameworks and technologies.",
+  },
+  {
+    h2: "Effective AI usage",
+    tags: ["Task Automation"],
+    p: "I automate repetitive tasks to streamline workflows and improve efficiency.",
+  },
+];
 
 function About() {
   return (
@@ -51,6 +62,27 @@ function About() {
             <p>Lagos, Nigeria</p>
           </div>
         </div>
+      </div>
+
+      <div className="about-array">
+        {aboutArray.map((items, index) => (
+          <div className="about-array-container" key={index}>
+            <h2 className="secondary-heading about-array-secondary-heading">
+              {items.h2}
+            </h2>
+            <div className="about-tags-containers">
+              {items.tags.length === 0
+                ? ""
+                : items.tags.map((tag, tagIndex) => (
+                    <p key={tagIndex} className="about-tag">
+                      {tag}
+                    </p>
+                  ))}
+            </div>
+
+            <p className="about-array-details">{items.p}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

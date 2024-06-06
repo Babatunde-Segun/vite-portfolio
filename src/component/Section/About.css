@@ -24,9 +24,6 @@
   flex-wrap: wrap;
 }
 
-.about-basic-info:hover {
-}
-
 .about-basic-info:hover p {
   position: relative;
   transition: all ease-in-out 0.9s;
@@ -40,4 +37,50 @@
 
 .basic-h6 {
   color: #766;
+}
+
+.about-array {
+  gap: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.about-array-container {
+  padding: 1.2rem;
+  padding-right: 0rem;
+  border-radius: 10px;
+  border: 1px solid orangered;
+  max-width: 20rem;
+}
+
+.about-array-secondary-heading {
+  color: orangered;
+  margin-top: 0rem !important;
+  width: 80%;
+}
+
+.about-tags-containers {
+  display: flex;
+  column-gap: 0.3rem;
+  row-gap: 0.1rem;
+  /* flex-wrap: wrap; */
+}
+
+.about-tag {
+  /* padding: .2rem .4rem; */
+  /* display: inline; */
+  margin: 1rem 0;
+  padding: 0.1rem 0.2rem;
+  background: #ffffff60;
+  /* background-color: orangered; */
+  color: rgb(14, 13, 13);
+  /* color: white; */
+  border-radius: 50rem;
+  /* max-width: 10rem; */
+}
+
+.about-array-details {
+  width: 90%;
 }
