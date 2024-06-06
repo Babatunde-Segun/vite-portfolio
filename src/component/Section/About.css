@@ -1,9 +1,12 @@
+#about {
+  margin-top: 6rem;
+}
 .about-details-container {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .about-summary {
