@@ -6,6 +6,7 @@ import Navbar from "./component/NavbarThing/NavbarContainer";
 import Home from "./component/Section/Home";
 import Portfolio from "./component/Section/Portfolio";
 import About from "./component/Section/About";
+import Resume from "./component/Section/Resume";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -20,6 +21,7 @@ function App() {
             <Home />
             <Portfolio />
             <About />
+            <Resume />
           </main>
         </div>
       </ThemeProvider>
