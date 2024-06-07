@@ -1,3 +1,38 @@
 #resume {
   margin-top: 3rem;
 }
+
+.resume-tertiary-heading {
+  margin: 2rem 0 1rem;
+  color: #666;
+  font-size: 1.3rem;
+}
+
+.resume-flex-container {
+  display: flex;
+  border: none;
+  padding: 1rem 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+
+.resume-flex-container-date {
+  width: 15%;
+}
+.resume-flex-container-course {
+  width: 43%;
+}
+
+.resume-flex-container-course h3 {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.resume-flex-container-details {
+  width: 40%;
+}
+
+.work-experience {
+  margin-top: 6rem;
+}
