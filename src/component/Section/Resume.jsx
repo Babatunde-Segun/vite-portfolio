@@ -81,12 +81,13 @@ function Resume() {
         </div>
       </div>
 
-      {/* Tools */}
+      {/* Tools container */}
       <div className="resume-tools">
         <h3 className="secondary-heading resume-tools-sc">
           Tools I Proficiently work with
         </h3>
 
+        {/* Tools array and image */}
         <div className="resume-tool-container">
           {toolsArray.map((tool, index) => (
             <div key={index} className="resume-tool-subcontainer">
