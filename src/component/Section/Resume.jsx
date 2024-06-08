@@ -5,30 +5,30 @@ import daisy from "../../assets/Daisy.png";
 import html from "../../assets/HTMl.png";
 import ts from "../../assets/TS.png";
 import nextlogo from "../../assets/nextlogo.jpg";
-// import js from "../../assets/js.png";
+import tailwind from "../../assets/tailwind.png";
 import reactlogo from "../../assets/Reactreal.png";
 import jslogo from "../../assets/js.png";
 
 const toolsArray = [
   {
-    img: "",
-    title: "",
+    img: reactlogo,
+    title: "React",
   },
   {
-    img: "",
-    title: "",
+    img: nextlogo,
+    title: "NextJS",
   },
   {
-    img: "",
-    title: "",
+    img: ts,
+    title: "TypeScript",
   },
   {
-    img: "",
-    title: "",
+    img: tailwind,
+    title: "Tailwind",
   },
   {
-    img: "",
-    title: "",
+    img: daisy,
+    title: "Daisy UI",
   },
 ];
 
@@ -86,7 +86,15 @@ function Resume() {
         <h3 className="secondary-heading resume-tools-sc">
           Tools I Proficiently work with
         </h3>
-        <img src={reactlogo} alt="" />
+
+        <div className="resume-tool-container">
+          {toolsArray.map((tool, index) => (
+            <div key={index} className="resume-tool-subcontainer">
+              <img src={tool.img} alt={tool.title} className="tool-img" />
+              <p className="tool-details">{tool.title}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

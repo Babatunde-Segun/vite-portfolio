@@ -35,4 +35,35 @@
 
 .work-experience {
   margin-top: 6rem;
+  font-weight: 500;
+}
+
+.resume-tools {
+  margin-top: 6rem;
+}
+
+.resume-tool-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+.resume-tool-subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 2rem;
+  border: 1px solid #666;
+  border-radius: 10px;
+}
+
+.tool-img {
+  max-width: 5rem;
+  border-radius: 100rem;
+}
+
+.tool-details {
+  font-size: 1.2rem;
 }
