@@ -7,6 +7,7 @@ import Home from "./component/Section/Home";
 import Portfolio from "./component/Section/Portfolio";
 import About from "./component/Section/About";
 import Resume from "./component/Section/Resume";
+import Contact from "./component/Section/Contact";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -22,6 +23,7 @@ function App() {
             <Portfolio />
             <About />
             <Resume />
+            <Contact />
           </main>
         </div>
       </ThemeProvider>

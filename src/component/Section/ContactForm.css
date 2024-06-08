@@ -1,0 +1,83 @@
+/* src/ContactForm.css */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+}
+
+#company {
+  border: none;
+  border-bottom: 5px solid red;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input {
+  border: none;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-bottom: 2px solid orangered;
+}
+
+.form-group .error {
+  color: red;
+  font-size: 0.875rem;
+}
+
+/* Make the message textarea and button span across both columns */
+.full-width {
+  grid-column: span 2;
+}
+
+button {
+  width: 30rem;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+}
