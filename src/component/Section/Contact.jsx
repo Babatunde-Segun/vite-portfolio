@@ -1,10 +1,17 @@
 import React from "react";
 import "./Contact.css";
 import Tag from "../Tag/Tag";
+import { FaGithub } from "react-icons/fa";
+<FaGithub />;
+import { FaFacebook } from "react-icons/fa";
+<FaFacebook />;
+import { FaLinkedin } from "react-icons/fa";
+<FaLinkedin />;
 
 // src/ContactForm.js
 import { useState } from "react";
 import "./ContactForm.css";
+import { IoMdPaperPlane } from "react-icons/io";
 
 function ContactForm() {
   const [errors, setErrors] = useState({});
@@ -101,7 +108,9 @@ function ContactForm() {
         {errors.message && <span className="error">{errors.message}</span>}
       </div>
       <div className="full-width">
-        <button type="submit">Submit</button>
+        <button type="submit">
+          Send Message <IoMdPaperPlane />
+        </button>
       </div>
     </form>
   );

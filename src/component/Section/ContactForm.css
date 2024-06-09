@@ -20,32 +20,21 @@
   margin-bottom: 0.5rem;
 }
 
-#company {
-  border: none;
-  border-bottom: 5px solid red;
-}
-
 .form-group input,
 .form-group textarea {
   padding: 0.5rem;
   border: none;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #dac0a3;
   border-radius: 0;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.form-group input {
-  border: none;
-  background-color: transparent;
-  color: rgb(0, 0, 0);
   font-size: 1.2rem;
+  transition: border-color 0.3s ease;
+  background-color: transparent;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: none;
   border-bottom: 2px solid orangered;
+  outline: none;
 }
 
 .form-group .error {
@@ -59,10 +48,10 @@
 }
 
 button {
-  width: 30rem;
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: #fff;
