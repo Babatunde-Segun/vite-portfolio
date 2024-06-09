@@ -7,6 +7,7 @@ import { useState } from "react";
 import "./ContactForm.css";
 
 function ContactForm() {
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,8 +15,6 @@ function ContactForm() {
     phone: "",
     message: "",
   });
-
-  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
