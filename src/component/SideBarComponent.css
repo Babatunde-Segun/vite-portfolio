@@ -64,3 +64,24 @@
   max-width: 97%;
   margin-top: 0.5rem;
 }
+
+@media (max-width: 1072px) {
+  .sidebar {
+    display: none;
+    /* position: static; */
+  }
+}
+
+.primary-heading,
+.secondary-heading {
+  line-height: 1;
+}
+
+.secondary-heading {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.secondary-heading span {
+  color: orangered;
+}

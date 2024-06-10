@@ -58,3 +58,10 @@ body,
 .secondary-heading span {
   color: orangered;
 }
+
+@media (max-width: 1072px) {
+  .main {
+    margin: 0;
+    padding: 2rem 4rem;
+  }
+}

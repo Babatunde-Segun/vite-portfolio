@@ -16,6 +16,53 @@
   gap: 10rem;
 }
 
+.home-introduction {
+  /* display: flex; */
+  display: none;
+}
+
+@media (max-width: 1072px) {
+  .home-introduction {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .home-introduction-img-container {
+    max-width: 20rem;
+  }
+
+  .detail-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    /* gap: 10rem; */
+  }
+
+  .sidebar-button-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .cv-btn {
+    background-color: white;
+    background-color: orangered;
+    color: white;
+  }
+}
+
+@media (max-width: 500px) {
+  .detail-flex-container {
+    flex-direction: column-reverse;
+    /* gap: 2rem; */
+  }
+  .dpb {
+    margin: 4rem 0;
+  }
+}
+
 .home-btn-container {
   display: flex;
   gap: 2rem;
