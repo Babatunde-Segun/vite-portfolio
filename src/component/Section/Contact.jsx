@@ -12,6 +12,53 @@ import { FaLinkedin } from "react-icons/fa";
 import { useState } from "react";
 import "./ContactForm.css";
 import { IoMdPaperPlane } from "react-icons/io";
+import { FaTwitter } from "react-icons/fa6";
+
+const iconsArray = [
+  { id: 1, icon: <FaGithub /> },
+  { id: 3, icon: <FaLinkedin /> },
+  { id: 4, icon: <FaTwitter /> },
+  { id: 2, icon: <FaFacebook /> },
+];
+
+function IconsDisplay() {
+  return (
+    <div className="icons-container">
+      {iconsArray.map((iconObj) => (
+        <div key={iconObj.id} className="icon-item">
+          {iconObj.icon}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-item">
+        <h4>Location</h4>
+        <p>
+          <a
+            href="https://www.google.com/maps/place/lagos"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            1234 Street Name, City, Country
+          </a>
+        </p>
+      </div>
+      <div className="footer-item">
+        <h4>Email</h4>
+        <p>
+          <a href="mailto:babatundesegun123@gmail.com">
+            Babatundesegun123e@gmail.com
+          </a>
+        </p>
+      </div>
+    </footer>
+  );
+}
 
 function ContactForm() {
   const [errors, setErrors] = useState({});
@@ -126,6 +173,14 @@ function Contact() {
       </h2>
 
       <ContactForm />
+      <IconsDisplay />
+
+      <h2 className="secondary-heading contact-footer-secondary-heading">
+        Want to know more about me, tell me about your project or just to say
+        hello? Drop me a line and I'll get back as soon as possible.
+      </h2>
+
+      <Footer />
     </section>
   );
 }
