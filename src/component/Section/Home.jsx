@@ -11,11 +11,13 @@ import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { LiaDownloadSolid } from "react-icons/lia";
+import CountupComponent from "../Countup";
 
 function Home() {
   return (
     <section id="home">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="home-introduction">
         <div
@@ -51,9 +53,14 @@ function Home() {
                   <FaXTwitter className="sidebar-icon" />
                 </div>
               </div>
+
+              <CountupComponent />
+
               <div className="sidebar-button-container">
-                <button>Let's talk</button>
-                <button className="cv-btn">CV</button>
+                <Button color="white" backgroundColor="orangered">
+                  Download Cv
+                  <LiaDownloadSolid />
+                </Button>
               </div>
             </div>
 
@@ -77,37 +84,7 @@ function Home() {
           </div>
 
           {/* Countup Section */}
-          <div className="my-[3rem] text-[1.5rem] sm:text-3xl flex gap-[5rem]  flex-wrap">
-            <div className="  text-[orangered] ">
-              <div className="flex gap-1">
-                <CountUp
-                  start={0}
-                  end={2}
-                  delay={3}
-                  duration={5}
-                  className="text-[3rem] font-[700] mb-[1rem]"
-                />
-                +
-              </div>
-              <p className="text-[1.3rem] sm:text-xl text-[white]">
-                Years of Experience
-              </p>
-            </div>
-
-            <div className=" lg:text-3xl text-[orangered]">
-              <div className="flex gap-1">
-                <CountUp
-                  start={0}
-                  end={20}
-                  delay={1}
-                  duration={5}
-                  className="text-[3rem] font-[700] mb-[1rem]"
-                />
-                +
-              </div>
-              <p className="text-[1.3rem] sm:text-xl text-[white]">Projects</p>
-            </div>
-          </div>
+          <CountupComponent />
 
           <div className="home-btn-container">
             <Button width="10rem">My Works</Button>
