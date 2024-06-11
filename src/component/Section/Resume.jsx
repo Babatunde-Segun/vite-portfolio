@@ -42,6 +42,7 @@ function Resume() {
         Education and practical <br /> experience
       </h2>
 
+      {/* education section */}
       <h3 className="resume-tertiary-heading">My Education</h3>
 
       <div className="resume-flex-container">
