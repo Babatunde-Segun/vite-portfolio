@@ -61,3 +61,10 @@
 
   /* bottom: 2%; */
 }
+
+@media (max-width: 400px) {
+  .portfolio-array {
+    row-gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+}
