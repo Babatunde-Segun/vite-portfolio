@@ -27,7 +27,7 @@
   }
 
   .home-introduction-img {
-    max-width: 10rem;
+    max-width: 100%;
   }
 
   .home-introduction {
@@ -38,7 +38,8 @@
   }
 
   .home-introduction-img-container {
-    max-width: 20rem;
+    max-width: 14rem;
+    margin: 0 auto;
   }
 
   .detail-flex-container {
@@ -63,6 +64,10 @@
 @media (max-width: 600px) {
   .home-primary-header {
     font-size: 2.5rem;
+  }
+
+  .detail-flex-container {
+    align-items: safe;
   }
 }
 
@@ -91,5 +96,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 400px) {
+  .home-primary-header {
+    font-size: 2.2rem;
   }
 }

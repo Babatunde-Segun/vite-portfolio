@@ -904,6 +904,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mb-\[0\.2rem\] {
+  margin-bottom: 0.2rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1738,6 +1742,10 @@ video {
 
 .gap-\[5rem\] {
   gap: 5rem;
+}
+
+.gap-\[2rem\] {
+  gap: 2rem;
 }
 
 .gap-x-0 {
@@ -2652,6 +2660,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[1rem\] {
+  font-size: 1rem;
 }
 
 .font-\[700\] {
@@ -7787,6 +7799,10 @@ body,
     margin-bottom: 4rem;
   }
 
+  .sm\:mb-\[1rem\] {
+    margin-bottom: 1rem;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -7801,6 +7817,10 @@ body,
 
   .sm\:items-center {
     align-items: center;
+  }
+
+  .sm\:gap-\[5rem\] {
+    gap: 5rem;
   }
 
   .sm\:text-3xl {
