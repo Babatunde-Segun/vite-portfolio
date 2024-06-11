@@ -67,3 +67,29 @@
 .tool-details {
   font-size: 1.2rem;
 }
+
+@media (max-width: 666px) {
+  .resume-flex-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .resume-flex-container-date {
+    width: 50%;
+  }
+
+  .resume-flex-container-course {
+    width: 70%;
+  }
+
+  .resume-flex-container-details {
+    margin-top: 0.5rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  .resume-flex-container-details {
+    width: 90%;
+  }
+}

@@ -84,3 +84,9 @@
 .about-array-details {
   width: 90%;
 }
+
+@media (max-width: 735px) {
+  .about-summary {
+    max-width: 99%;
+  }
+}
