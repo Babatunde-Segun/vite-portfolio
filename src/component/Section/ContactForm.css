@@ -67,6 +67,25 @@ button:hover {
 
 @media (max-width: 768px) {
   .contact-form {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin-bottom: 0.3rem;
+  }
+
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .form-group label {
+    margin: 0;
+  }
+
+  .form-group input {
+    font-size: 1rem;
+    padding: 0 0.3rem;
   }
 }

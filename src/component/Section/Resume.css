@@ -86,8 +86,12 @@
     margin-top: 0.5rem;
     width: 80%;
   }
+
+  .resume-tool-subcontainer {
+    padding: 0.7rem 1.4rem;
+  }
   .tool-img {
-    max-width: 4rem;
+    max-width: 3rem;
   }
 
   .tool-details {

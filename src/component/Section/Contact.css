@@ -64,3 +64,10 @@
 .footer-item a:hover {
   color: #ff6347; /* Orangered color */
 }
+
+@media (max-width: 766px) {
+  .icon-item {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
