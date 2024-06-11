@@ -86,10 +86,20 @@
     margin-top: 0.5rem;
     width: 80%;
   }
+  .tool-img {
+    max-width: 4rem;
+  }
+
+  .tool-details {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 420px) {
   .resume-flex-container-details {
     width: 90%;
+  }
+  .tool-details {
+    font-size: 0.8rem;
   }
 }
