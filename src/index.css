@@ -68,6 +68,19 @@ body,
 
 @media (max-width: 666px) {
   .main {
-    padding: 0 3%;
+    padding: 0 2% 0 4%;
+  }
+
+  .secondary-heading {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .secondary-heading {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.8rem;
   }
 }

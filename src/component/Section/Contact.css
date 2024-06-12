@@ -70,4 +70,8 @@
     padding: 1rem;
     font-size: 2rem;
   }
+
+  .contact-footer-secondary-heading {
+    width: 90%;
+  }
 }
