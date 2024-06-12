@@ -30,7 +30,7 @@ function Home() {
           </h1>
 
           <div className="detail-flex-container">
-            <div>
+            <div className="detail-flex-container-max-width">
               <div className="detail-holding-container">
                 <p>specialization:</p>
                 <h4>Software development</h4>

@@ -79,6 +79,10 @@
   .dpb {
     margin: 4rem 0;
   }
+
+  .detail-flex-container-max-width {
+    width: 100%;
+  }
 }
 
 .home-btn-container {
