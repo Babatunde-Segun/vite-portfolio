@@ -44,9 +44,12 @@ export const fadeIn = (delay = 0.2) => {
       x: 0,
       opacity: 1,
       transition: {
-        delayChildren: 0.5,
-        staggerDirection: -1,
-        type: "tween",
+        delayChildren: 0.9,
+        staggerChildren: 0.4,
+        staggerDirection: 1,
+
+        duration: 0.5,
+        // type: "tween",
       },
     },
 

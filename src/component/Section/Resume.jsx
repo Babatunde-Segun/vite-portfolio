@@ -8,6 +8,8 @@ import nextlogo from "../../assets/nextlogo.jpg";
 import tailwind from "../../assets/tailwind.png";
 import reactlogo from "../../assets/Reactreal.png";
 import jslogo from "../../assets/js.png";
+import { fadeIn } from "../variant";
+import { motion } from "framer-motion";
 
 const toolsArray = [
   {
@@ -34,7 +36,14 @@ const toolsArray = [
 
 function Resume() {
   return (
-    <motion.section id="resume">
+    <motion.section
+      variants={fadeIn()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      exit="remove"
+      id="resume"
+    >
       {/* Tag */}
       <Tag>Resume</Tag>
 
@@ -89,14 +98,30 @@ function Resume() {
         </h3>
 
         {/* Tools array and image */}
-        <div className="resume-tool-container">
+        <motion.div
+          variants={fadeIn()}
+          initial="hidden"
+          exit="hidden"
+          whileInView="showWithStaggerChildren"
+          className="resume-tool-container"
+        >
           {toolsArray.map((tool, index) => (
             <div key={index} className="resume-tool-subcontainer">
-              <img src={tool.img} alt={tool.title} className="tool-img" />
+              <motion.img
+                variants={{
+                  hidden: { opacity: 0, scale: 0.5 },
+                  showWithStaggerChildren: { opacity: 1, scale: 1 },
+                }}
+                exit={{ opacity: 1, scale: 1 }}
+                transition={{ type: "spring" }}
+                src={tool.img}
+                alt={tool.title}
+                className="tool-img"
+              />
               <p className="tool-details">{tool.title}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
