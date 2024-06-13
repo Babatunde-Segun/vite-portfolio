@@ -2,17 +2,18 @@ import React from "react";
 import "./Contact.css";
 import Tag from "../Tag/Tag";
 import { FaGithub } from "react-icons/fa";
-<FaGithub />;
+
 import { FaFacebook } from "react-icons/fa";
-<FaFacebook />;
+
 import { FaLinkedin } from "react-icons/fa";
-<FaLinkedin />;
+import { fadeIn } from "../variant";
 
 // src/ContactForm.js
 import { useState } from "react";
 import "./ContactForm.css";
 import { IoMdPaperPlane } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const iconsArray = [
   { id: 1, icon: <FaGithub /> },
@@ -23,13 +24,46 @@ const iconsArray = [
 
 function IconsDisplay() {
   return (
-    <div className="icons-container">
+    // <motion.div
+    //   variants={fadeIn()}
+    //   initial="hidden"
+    //   exit="hidden"
+    //   whileInView="show"
+    //   className="icons-container"
+    // >
+    //   {iconsArray.map((iconObj) => (
+    //     <motion.div
+    //       exit={{ opacity: 1, scale: 1 }}
+    //       transition={{ type: "spring" }}
+    //       key={iconObj.id}
+    //       className="icon-item"
+    //     >
+    //       {iconObj.icon}
+    //     </motion.div>
+    //   ))}
+    // </motion.div>
+    <motion.div
+      variants={fadeIn()}
+      initial="hidden"
+      exit="hidden"
+      whileInView="showWithStaggerChildren"
+      className="icons-container"
+    >
       {iconsArray.map((iconObj) => (
-        <div key={iconObj.id} className="icon-item">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, scale: 0.5 },
+            showWithStaggerChildren: { opacity: 1, scale: 1 },
+          }}
+          exit={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring" }}
+          key={iconObj.id}
+          className="icon-item"
+        >
           {iconObj.icon}
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 

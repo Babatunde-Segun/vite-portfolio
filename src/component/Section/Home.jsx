@@ -13,6 +13,8 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { LiaDownloadSolid } from "react-icons/lia";
 import CountupComponent from "../Countup";
+import { fadeIn } from "../variant";
+import { motion } from "framer-motion";
 
 function Home() {
   return (
@@ -25,9 +27,15 @@ function Home() {
             width: "100%",
           }}
         >
-          <h1 className="home-primary-header">
+          <motion.h1
+            variants={fadeIn()}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="home-primary-header"
+          >
             I'm Babatunde Segun <br />A Software <span>Developer</span>
-          </h1>
+          </motion.h1>
 
           <div className="detail-flex-container">
             <div className="detail-flex-container-max-width">
