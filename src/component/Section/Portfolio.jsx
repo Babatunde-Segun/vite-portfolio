@@ -58,7 +58,7 @@ function Portfolio() {
         className="portfolio-array"
       >
         {portfolioArray.map((items, index) => (
-          <AnimatePresence>
+          <AnimatePresence key={index}>
             <Link
               to={items.href}
               className="portfolio-img-container"

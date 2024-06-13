@@ -8,26 +8,36 @@ import Portfolio from "./component/Section/Portfolio";
 import About from "./component/Section/About";
 import Resume from "./component/Section/Resume";
 import Contact from "./component/Section/Contact";
+import Nav from "./component/Nav";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const [theme, colorMode] = useMode();
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <div className="app">
+    <Router>
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Nav />
           <SideBar />
-          <main className="main">
-            <Home />
-            <Portfolio />
-            <About />
-            <Resume />
-            <Contact />
-          </main>
-        </div>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+          <div className="app">
+            <main className="main">
+              <Routes>
+                <Route path="/" element={<Home />} />
+
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/contact" element={<Contact />} />
+                {/* <Resume /> */}
+                {/* <Contact /> */}
+              </Routes>
+            </main>
+          </div>
+        </ThemeProvider>
+      </ColorModeContext.Provider>
+    </Router>
   );
 }
 
