@@ -7,6 +7,8 @@ import thumb4 from "../../assets/thumb4.jpg";
 import nextfoodfullscreen from "../../assets/nextfoodfullscreen.png";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
+import { fadeIn } from "../variant";
+import { AnimatePresence, motion } from "framer-motion";
 
 const portfolioArray = [
   {
@@ -45,24 +47,54 @@ function Portfolio() {
         Featured <span>Project</span>
       </h2>
 
-      <div className="portfolio-array">
+      <motion.div
+        variants={fadeIn()}
+        initial="hidden"
+        whileInView="showWithStaggerChildren"
+        viewport={{
+          once: true,
+        }}
+        exit="remove"
+        className="portfolio-array"
+      >
         {portfolioArray.map((items, index) => (
-          <Link to={items.href} className="portfolio-img-container" key={index}>
-            <img src={items.src} alt={items.name} className="portfolio-img" />
-            <div className="portfolio-details-container">
-              <div className="portfolio-details-subcontainer">
-                {items.tags.length === 0
-                  ? ""
-                  : items.tags.map((tag, tagIndex) => (
-                      <p key={tagIndex} className="portfolio-img-details">
-                        {tag}
-                      </p>
-                    ))}
+          <AnimatePresence>
+            <Link
+              to={items.href}
+              className="portfolio-img-container"
+              key={index}
+            >
+              <motion.img
+                variants={{
+                  hidden: { opacity: 0, scale: 0.5 },
+                  showWithStaggerChildren: { opacity: 1, scale: 1 },
+                }}
+                exit={{ opacity: 1, scale: 1 }}
+                transition={{ type: "spring", duration: 0.9 }}
+                whileHover={{ scale: 1.09 }}
+                viewport={{ once: true }}
+                src={items.src}
+                alt={items.name}
+                className="portfolio-img"
+              />
+              <div className="portfolio-details-container">
+                <div className="portfolio-details-subcontainer">
+                  {items.tags.length === 0
+                    ? ""
+                    : items.tags.map((tag, tagIndex) => (
+                        <motion.p
+                          key={tagIndex}
+                          className="portfolio-img-details"
+                        >
+                          {tag}
+                        </motion.p>
+                      ))}
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </AnimatePresence>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

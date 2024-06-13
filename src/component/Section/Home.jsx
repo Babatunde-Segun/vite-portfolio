@@ -14,7 +14,7 @@ import { FaInstagram } from "react-icons/fa";
 import { LiaDownloadSolid } from "react-icons/lia";
 import CountupComponent from "../Countup";
 import { fadeIn } from "../variant";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Home() {
   return (
@@ -28,7 +28,7 @@ function Home() {
           }}
         >
           <motion.h1
-            variants={fadeIn()}
+            variants={fadeIn(100)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -86,13 +86,21 @@ function Home() {
         <div>
           <Tag>Let's talk</Tag>
           <div>
-            <h1 className="home-primary-header">
+            <motion.h1
+              variants={fadeIn()}
+              initial="hidden"
+              whileInView="show"
+              exit="remove"
+              className="home-primary-header"
+            >
               I'm Babatunde Segun <br />A Software <span>Developer</span>
-            </h1>
+            </motion.h1>
           </div>
 
           {/* Countup Section */}
-          <CountupComponent />
+          <AnimatePresence>
+            <CountupComponent />
+          </AnimatePresence>
 
           <div className="home-btn-container">
             <Button width="10rem">My Works</Button>

@@ -25,7 +25,7 @@
 //   };
 // };
 
-export const fadeIn = () => {
+export const fadeIn = (delay = 0.2) => {
   return {
     hidden: {
       y: 40,
@@ -34,21 +34,33 @@ export const fadeIn = () => {
       transition: {
         type: "spring",
 
-        // delay: 0.2,
+        delay: `${delay}`,
         // ease: [0.25, 0.6, 0.3, 0.8],
       },
     },
+
+    showWithContainer: {
+      y: 0,
+      x: 0,
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerDirection: -1,
+        type: "tween",
+      },
+    },
+
     show: {
       y: 0,
       x: 0,
       opacity: 1,
       transition: {
         type: "spring",
-        stiffness: 100,
+        // stiffness: 100,
 
-        // delay: 0.2,
+        delay: `${delay}`,
         // staggerChildren: 0.3,
-        duration: 1,
+        // duration: 1,
         // ease: [0.25, 0.25, 0.25, 0.75],
       },
     },

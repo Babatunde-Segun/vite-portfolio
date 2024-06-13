@@ -34,7 +34,7 @@ const toolsArray = [
 
 function Resume() {
   return (
-    <section id="resume">
+    <motion.section id="resume">
       {/* Tag */}
       <Tag>Resume</Tag>
 
@@ -98,7 +98,7 @@ function Resume() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
