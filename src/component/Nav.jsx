@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+// console.log(Link);
+
 import {
-  HiHome,
-  HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
-  HiEnvelope,
-} from "react-icons/hi2";
+  FaHome,
+  FaUser,
+  FaBriefcase,
+  FaFileAlt,
+  FaEnvelope,
+} from "react-icons/fa";
 
 // Navigation data
 export const navData = [
-  { name: "home", path: "#home", icon: <HiHome /> },
-  { name: "about", path: "#about", icon: <HiUser /> },
-  { name: "services", path: "#services", icon: <HiRectangleGroup /> },
-  { name: "work", path: "#work", icon: <HiViewColumns /> },
-  { name: "contact", path: "#contact", icon: <HiEnvelope /> },
+  { name: "home", path: "#home", icon: <FaHome /> },
+  { name: "portfolio", path: "#portfolio", icon: <FaBriefcase /> },
+  { name: "about", path: "#about", icon: <FaUser /> },
+  { name: "resume", path: "#resume", icon: <FaFileAlt /> },
+  { name: "contact", path: "#contact", icon: <FaEnvelope /> },
 ];
 
 const Nav = () => {
@@ -36,11 +38,16 @@ const Nav = () => {
 
     sections.forEach((section) => {
       observer.observe(section);
+      console.log(activeSection);
+      const style = {
+        backgroundColor: "orangered",
+      };
     });
 
     return () => {
       sections.forEach((section) => {
         observer.unobserve(section);
+        setActiveSection((prevState) => !prevState);
       });
     };
   }, []);
@@ -53,7 +60,9 @@ const Nav = () => {
             key={index}
             href={link.path}
             className={`${
-              `#${activeSection}` === link.path ? "text-accent" : ""
+              `#${activeSection}` === link.path
+                ? { backgroundColor: "orangered" }
+                : ""
             } relative flex items-center group hover:text-accent transition-all duration-300 cursor-pointer`}
           >
             {/* tooltip */}
