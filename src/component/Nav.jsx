@@ -27,7 +27,7 @@ const Nav = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
-            window.location.hash = `#${entry.target.id}`;
+            // window.location.hash = `#${entry.target.id}`;
           }
         });
       },
