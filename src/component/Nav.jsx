@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
 // console.log(Link);
 
@@ -21,24 +21,48 @@ export const navData = [
 
 const Nav = () => {
   const [activeSection, setActiveSection] = useState("");
+  const activeSectionRef = useRef("");
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          // if (entry.isIntersecting) {
+          //   console.log(entry);
+          //   console.log(entry.target.id);
+          //   setActiveSection(entry.target.id);
+          //   console.log(activeSection);
+          //   // window.location.hash = `#${entry.target.id}`;
+          // }
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-            // window.location.hash = `#${entry.target.id}`;
+            activeSectionRef.current = entry.target.id;
+            const allNavLink = document.querySelectorAll("nav a");
+
+            console.log(allNavLink);
+
+            document.querySelectorAll("nav a").forEach((link) => {
+              link.classList.remove("activeBackGrd");
+
+              link.getAttribute("href") === `#${entry.target.id}`
+                ? link.classList.add("activeBackGrd")
+                : "";
+              console.log(link.getAttribute("href"));
+
+              // link.classList.toggle(
+              //   "text-accent",
+              //   link.getAttribute("href") === `#${entry.target.id}`
+              // );
+            });
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.4 }
     );
 
     sections.forEach((section) => {
       observer.observe(section);
-      console.log(activeSection);
+      // console.log(activeSection);
       const style = {
         backgroundColor: "orangered",
       };
@@ -47,7 +71,6 @@ const Nav = () => {
     return () => {
       sections.forEach((section) => {
         observer.unobserve(section);
-        setActiveSection((prevState) => !prevState);
       });
     };
   }, []);
@@ -66,9 +89,9 @@ const Nav = () => {
             } relative flex items-center group hover:text-accent transition-all duration-300 cursor-pointer`}
           >
             {/* tooltip */}
-            <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
+            <div className="absolute pr-8 right-0 hidden xl:group-hover:flex">
               <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
-                <div className="text-[12px] leading-none font-semibold capitalize">
+                <div className="text-[1rem] leading-none font-semibold capitalize">
                   {link.name}
                 </div>
                 {/* triangle */}

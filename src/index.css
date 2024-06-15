@@ -59,6 +59,10 @@ body,
   color: orangered;
 }
 
+.activeBackGrd {
+  color: red;
+}
+
 @media (max-width: 1072px) {
   .main {
     margin: 0;
