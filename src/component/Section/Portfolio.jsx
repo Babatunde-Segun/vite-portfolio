@@ -8,12 +8,19 @@ import feedbackapp from "../../assets/feedbackappdesktop.png";
 import githubfinder from "../../assets/githhubfinder-dark-mode.png";
 import nextfoodfullscreen from "../../assets/nextfoodfullscreen.png";
 import housemarketdesktop from "../../assets/housemarketdesktopview.png";
+import supportDesk from "../../assets/support-deskdesktop.png";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import { fadeIn } from "../variant";
 import { AnimatePresence, motion } from "framer-motion";
 
 const portfolioArray = [
+  {
+    name: "title 4",
+    href: "https://nextjs-food-project.vercel.app/",
+    src: nextfoodfullscreen,
+    tags: ["NextJS"],
+  },
   {
     name: "title 1",
     src: housemarketdesktop,
@@ -29,14 +36,8 @@ const portfolioArray = [
   {
     href: "https://todo-app-fmge.onrender.com/",
     name: "title 3",
-    src: thumb3,
+    src: supportDesk,
     tags: ["react", "NextJS", "typescript"],
-  },
-  {
-    name: "title 4",
-    href: "https://nextjs-food-project.vercel.app/",
-    src: nextfoodfullscreen,
-    tags: ["NextJS"],
   },
 ];
 

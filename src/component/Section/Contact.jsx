@@ -78,7 +78,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            1234 Street Name, City, Country
+            Lagos, Nigeria
           </a>
         </p>
       </div>

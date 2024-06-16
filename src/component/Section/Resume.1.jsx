@@ -1,40 +1,10 @@
 import React from "react";
 import Tag from "../Tag/Tag";
-import "./Resume.css";
-import daisy from "../../assets/Daisy.png";
-import html from "../../assets/HTMl.png";
-import ts from "../../assets/TS.png";
-import nextlogo from "../../assets/nextlogo.jpg";
-import tailwind from "../../assets/tailwind.png";
-import reactlogo from "../../assets/Reactreal.png";
-import jslogo from "../../assets/js.png";
 import { fadeIn } from "../variant";
 import { motion } from "framer-motion";
+import { toolsArray } from "./Resume";
 
-const toolsArray = [
-  {
-    img: reactlogo,
-    title: "React",
-  },
-  {
-    img: nextlogo,
-    title: "NextJS",
-  },
-  {
-    img: ts,
-    title: "TypeScript",
-  },
-  {
-    img: tailwind,
-    title: "Tailwind",
-  },
-  {
-    img: daisy,
-    title: "Daisy UI",
-  },
-];
-
-function Resume() {
+export function Resume() {
   return (
     <motion.section
       variants={fadeIn()}
@@ -64,15 +34,16 @@ function Resume() {
 
         <div className="resume-flex-container-details">
           <p>
-            {/* Through my studies, I've gained a deeper understanding of social
+            Through my studies, I've gained a deeper understanding of social
             structures, cultural influences, and the complexities of
-            interpersonal relationships.  */}
-            Through my studies, I've delved into the intricate world of physics,
-            exploring how forces shape our surroundings, how energy flows
-            through systems, and the fascinating laws that govern everything
-            from tiny particles to massive galaxies. This journey has given me a
-            deeper appreciation for the intricate structures of the universe,
-            the subtle influences of physical laws on everyday life.
+            interpersonal relationships. Through my studies, I've delved into
+            the intricate world of physics, exploring how forces shape our
+            surroundings, how energy flows through systems, and the fascinating
+            laws that govern everything from tiny particles to massive galaxies.
+            This journey has given me a deeper appreciation for the intricate
+            structures of the universe, the subtle influences of physical laws
+            on everyday life, and the interconnectedness of all things through
+            fundamental forces and pheno
           </p>
         </div>
       </div>
@@ -132,5 +103,3 @@ function Resume() {
     </motion.section>
   );
 }
-
-export default Resume;
