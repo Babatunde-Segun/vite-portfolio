@@ -39,7 +39,7 @@ const portfolioArray = [
 
 function Portfolio() {
   return (
-    <section id="portfolio">
+    <section id="portfolio" className="portfolio">
       <Tag>Portfolio</Tag>
 
       <h2 className="secondary-heading portfolio-secondary-heading">
