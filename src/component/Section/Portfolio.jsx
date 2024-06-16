@@ -3,8 +3,11 @@ import Tag from "../Tag/Tag";
 import thumb1 from "../../assets/thumb1.jpg";
 import thumb2 from "../../assets/thumb2.jpg";
 import thumb3 from "../../assets/thumb3.jpg";
-import thumb4 from "../../assets/thumb4.jpg";
+// import thumb4 from "../../assets/thumb4.jpg";
+import feedbackapp from "../../assets/feedbackappdesktop.png";
+import githubfinder from "../../assets/githhubfinder-dark-mode.png";
 import nextfoodfullscreen from "../../assets/nextfoodfullscreen.png";
+import housemarketdesktop from "../../assets/housemarketdesktopview.png";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import { fadeIn } from "../variant";
@@ -13,14 +16,14 @@ import { AnimatePresence, motion } from "framer-motion";
 const portfolioArray = [
   {
     name: "title 1",
-    src: thumb1,
+    src: housemarketdesktop,
     href: "https://house-marketplace-hzo0.onrender.com/",
     tags: ["node", "React"],
   },
   {
     name: "title 2",
     href: "https://github-finder-alpha-six.vercel.app/",
-    src: thumb2,
+    src: githubfinder,
     tags: ["node", "JavaScript"],
   },
   {
