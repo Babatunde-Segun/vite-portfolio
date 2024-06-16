@@ -27,7 +27,8 @@
 
 .sidebar-img {
   /* max-height: 30rem; */
-  max-height: 20rem;
+  max-height: 19rem;
+  width: 100%;
   border-radius: 2rem;
 }
 
@@ -62,7 +63,7 @@
 
 .sidebar-button-container {
   max-width: 97%;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 1072px) {

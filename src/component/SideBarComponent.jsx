@@ -33,6 +33,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import fineMan from "../assets/portrait.avif";
+import segun from "../assets/segun.jpg";
 import Button from "./Button/Button";
 
 // import fineMan from "."
@@ -42,7 +43,7 @@ export default function SideBarComponent() {
     <div className="sidebar">
       <h2 className="sidebar-heading-secondary">Babatunde Segun</h2>
       <div className="sidebar-img-container">
-        <img className="sidebar-img" src={fineMan} alt="portfolio picture" />
+        <img className="sidebar-img" src={segun} alt="portfolio picture" />
       </div>
 
       <div className="detail-holding-container">
