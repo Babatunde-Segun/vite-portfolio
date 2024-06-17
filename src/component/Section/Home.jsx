@@ -6,6 +6,7 @@ import "./Home.css";
 import ProjectsBtn from "../ProjectsBtn";
 import CountUp from "react-countup";
 import picture from "../../assets/portrait.avif";
+import segun from "../../assets/segun.jpg";
 
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -78,7 +79,7 @@ function Home() {
           </div>
         </div>
         <div className="home-introduction-img-container">
-          <img src={picture} alt="picture" className="home-introduction-img" />
+          <img src={segun} alt="picture" className="home-introduction-img" />
         </div>
       </div>
 

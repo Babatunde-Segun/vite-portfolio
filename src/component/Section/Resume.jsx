@@ -8,6 +8,7 @@ import nextlogo from "../../assets/nextlogo.jpg";
 import tailwind from "../../assets/tailwind.png";
 import reactlogo from "../../assets/Reactreal.png";
 import jslogo from "../../assets/js.png";
+import segun from "../../assets/segun.jpg";
 import { fadeIn } from "../variant";
 import { motion } from "framer-motion";
 
