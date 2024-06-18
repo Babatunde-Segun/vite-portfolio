@@ -38,6 +38,7 @@ function Home() {
             I'm Babatunde Segun <br />A Software <span>Developer</span>
           </motion.h1>
 
+          {/* remenber to add paadding to footer */}
           <div className="detail-flex-container">
             <div className="detail-flex-container-max-width">
               <div className="detail-holding-container">
