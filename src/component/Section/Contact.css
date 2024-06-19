@@ -74,4 +74,8 @@
   .contact-footer-secondary-heading {
     width: 90%;
   }
+
+  .footer-item {
+    margin-bottom: 3rem;
+  }
 }
