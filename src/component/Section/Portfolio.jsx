@@ -64,6 +64,7 @@ function Portfolio() {
         {portfolioArray.map((items, index) => (
           <AnimatePresence key={index}>
             <Link
+              target="_blank"
               to={items.href}
               className="portfolio-img-container"
               key={index}
@@ -75,7 +76,7 @@ function Portfolio() {
                 }}
                 exit={{ opacity: 1, scale: 1 }}
                 transition={{ type: "spring", duration: 0.9 }}
-                whileHover={{ scale: 1.09 }}
+                whileHover={{ scale: 1.05 }}
                 viewport={{ once: true }}
                 src={items.src}
                 alt={items.name}
