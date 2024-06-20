@@ -68,6 +68,7 @@ function IconsDisplay() {
 }
 
 function Footer() {
+  // link no day work for mobile
   return (
     <footer className="footer">
       <div className="footer-item">
