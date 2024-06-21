@@ -14,12 +14,17 @@ import "./ContactForm.css";
 import { IoMdPaperPlane } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const iconsArray = [
-  { id: 1, icon: <FaGithub /> },
-  { id: 3, icon: <FaLinkedin /> },
-  { id: 4, icon: <FaTwitter /> },
-  { id: 2, icon: <FaFacebook /> },
+  { id: 1, icon: <FaGithub />, href: "https://github.com/Babatunde-Segun" },
+  {
+    id: 3,
+    icon: <FaLinkedin />,
+    href: "https://www.linkedin.com/in/babatunde-segun/",
+  },
+  { id: 4, icon: <FaTwitter />, href: "https://www.xcom/guzzman" },
+  { id: 2, icon: <FaFacebook />, href: "https://www.facebook.com" },
 ];
 
 function IconsDisplay() {
@@ -50,7 +55,9 @@ function IconsDisplay() {
       className="icons-container"
     >
       {iconsArray.map((iconObj) => (
-        <motion.div
+        <motion.a
+          href={iconObj.href}
+          target="_blank                                                                                                                                                          "
           variants={{
             hidden: { opacity: 0, scale: 0.5 },
             showWithStaggerChildren: { opacity: 1, scale: 1 },
@@ -61,7 +68,7 @@ function IconsDisplay() {
           className="icon-item"
         >
           {iconObj.icon}
-        </motion.div>
+        </motion.a>
       ))}
     </motion.div>
   );
