@@ -57,7 +57,7 @@ const Nav = () => {
           }
         });
       },
-      { threshold: 0.6, rootMargin: "50px" }
+      { threshold: 0.1 }
     );
 
     sections.forEach((section) => {
