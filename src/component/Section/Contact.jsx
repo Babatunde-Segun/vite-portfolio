@@ -29,24 +29,6 @@ const iconsArray = [
 
 function IconsDisplay() {
   return (
-    // <motion.div
-    //   variants={fadeIn()}
-    //   initial="hidden"
-    //   exit="hidden"
-    //   whileInView="show"
-    //   className="icons-container"
-    // >
-    //   {iconsArray.map((iconObj) => (
-    //     <motion.div
-    //       exit={{ opacity: 1, scale: 1 }}
-    //       transition={{ type: "spring" }}
-    //       key={iconObj.id}
-    //       className="icon-item"
-    //     >
-    //       {iconObj.icon}
-    //     </motion.div>
-    //   ))}
-    // </motion.div>
     <motion.div
       variants={fadeIn()}
       initial="hidden"
