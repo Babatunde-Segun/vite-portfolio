@@ -23,7 +23,7 @@ const iconsArray = [
     icon: <FaLinkedin />,
     href: "https://www.linkedin.com/in/babatunde-segun/",
   },
-  { id: 4, icon: <FaTwitter />, href: "https://www.xcom/guzzman" },
+  { id: 4, icon: <FaTwitter />, href: "https://x.com/seGUZMANn" },
   { id: 2, icon: <FaFacebook />, href: "https://www.facebook.com" },
 ];
 
@@ -92,11 +92,14 @@ function ContactForm() {
     company: "",
     phone: "",
     message: "",
+    subject: "",
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const validate = () => {
@@ -108,19 +111,20 @@ function ContactForm() {
     return formErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
     const formErrors = validate();
     if (Object.keys(formErrors).length === 0) {
-      // Submit the form (e.g., send data to the server)
-      console.log("Form submitted:", formData);
+      window.location.href = `mailto:babatundesegun123@gmail.com?Subject=${encodeURIComponent(
+        formData.subject + formData.phone
+      )}&body=${encodeURIComponent(formData.name + "\n\n" + formData.message)}`;
     } else {
       setErrors(formErrors);
     }
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" onSubmit={handleFormSubmit}>
       <div className="form-group">
         <label htmlFor="name">Name:</label>
         <input
@@ -166,6 +170,18 @@ function ContactForm() {
           required
         />
         {errors.phone && <span className="error">{errors.phone}</span>}
+      </div>
+      <div className="form-group">
+        <label htmlFor="subject">Subject:</label>
+        <input
+          id="subject"
+          type="text"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          required
+        />
+        {errors.subject && <span className="error">{errors.subject}</span>}
       </div>
       <div className="form-group full-width">
         <label htmlFor="message">Message:</label>
