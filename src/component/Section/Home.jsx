@@ -7,6 +7,7 @@ import ProjectsBtn from "../ProjectsBtn";
 import CountUp from "react-countup";
 import picture from "../../assets/portrait.avif";
 import segun from "../../assets/segun.jpg";
+import Cv from "../../assets/Resume.pdf";
 
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -16,6 +17,7 @@ import { LiaDownloadSolid } from "react-icons/lia";
 import CountupComponent from "../Countup";
 import { fadeIn } from "../variant";
 import { AnimatePresence, motion } from "framer-motion";
+// import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -68,8 +70,10 @@ function Home() {
 
               <div className="sidebar-button-container">
                 <Button color="white" backgroundColor="orangered">
-                  Download Cv
-                  <LiaDownloadSolid />
+                  <a download={Cv} href={Cv}>
+                    Download Cv
+                    <LiaDownloadSolid />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -106,7 +110,11 @@ function Home() {
 
           <div className="home-btn-container">
             <Button width="10rem">My Works</Button>
-            <Button width="10rem">CV</Button>
+            <Button width="10rem">
+              <a download={Cv} href={Cv}>
+                CV
+              </a>
+            </Button>
           </div>
         </div>
 
