@@ -3,6 +3,7 @@ import Tag from "../Tag/Tag";
 import "./About.css";
 import { Button } from "@nextui-org/react";
 import { LiaDownloadSolid } from "react-icons/lia";
+import Cv from "../../assets/Resume.pdf";
 
 const aboutArray = [
   {
@@ -39,8 +40,18 @@ function About() {
             and effective for everyone.
           </p>
           <Button>
-            Download Cv
-            <LiaDownloadSolid />
+            <a
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "3px",
+              }}
+              download={Cv}
+              href={Cv}
+            >
+              Download Cv
+              <LiaDownloadSolid />
+            </a>
           </Button>
         </div>
 
