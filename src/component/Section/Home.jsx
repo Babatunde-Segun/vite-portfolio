@@ -28,7 +28,7 @@ function Home() {
             width: "100%",
           }}
         >
-          <motion.h1
+          <h1
             variants={fadeIn(100)}
             initial="hidden"
             animate="show"
@@ -36,7 +36,7 @@ function Home() {
             className="home-primary-header"
           >
             I'm Babatunde Segun <br />A Software <span>Developer</span>
-          </motion.h1>
+          </h1>
 
           {/* remenber to add paadding to footer */}
           <div className="detail-flex-container">
