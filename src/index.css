@@ -19,13 +19,14 @@ body,
 
 /* The draggable part of the scrollbar */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: red;
   border-radius: 6px;
+  height: 10rem;
 }
 
 /* The scrollbar thumb when being hovered by the mouse */
 ::-webkit-scrollbar-thumb:hover {
-  background: red;
+  background: rgba(255, 0, 0, 0.911);
 }
 
 .app {
