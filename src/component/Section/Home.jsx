@@ -19,7 +19,16 @@ import { fadeIn } from "../variant";
 import { AnimatePresence, motion } from "framer-motion";
 // import { Link } from "react-router-dom";
 
+import { useContext } from "react";
+import { Box, IconButton, useTheme } from "@mui/material";
+import { ColorModeContext, tokens } from "../../theme";
+
 function Home() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const colorMode = useContext(ColorModeContext);
+  console.log(colorMode);
+  console.log(colors.orange);
   return (
     <section id="home">
       {/* <Navbar /> */}
@@ -37,7 +46,20 @@ function Home() {
             exit="hidden"
             className="home-primary-header"
           >
-            I'm Babatunde Segun <br />A Software <span>Developer</span>
+            I'm Babatunde Segun <br />A Software{" "}
+            <span
+              style={{
+                // color: `${
+                //   theme.palette.mode === "dark"
+                //     ? colors.orange[500]
+                //     : colors.orange[400]
+                // }`,
+
+                color: colors.orange[600],
+              }}
+            >
+              Developer
+            </span>
           </h1>
 
           {/* remenber to add paadding to footer */}
@@ -45,7 +67,13 @@ function Home() {
             <div className="detail-flex-container-max-width">
               <div className="detail-holding-container">
                 <p>specialization:</p>
-                <h4>Software development</h4>
+                <h4
+                  style={{
+                    color: colors.grey[600],
+                  }}
+                >
+                  Software development
+                </h4>
               </div>
               <div className="detail-holding-container">
                 <p>Based in:</p>
@@ -69,7 +97,10 @@ function Home() {
               <CountupComponent />
 
               <div className="sidebar-button-container">
-                <Button color="white" backgroundColor="orangered">
+                <Button
+                  color={colors.white[400]}
+                  backgroundColor={colors.orange[500]}
+                >
                   <a
                     download={Cv}
                     href={Cv}

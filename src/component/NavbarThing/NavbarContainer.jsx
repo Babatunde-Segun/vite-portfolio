@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Box, IconButton, useTheme } from "@mui/material";
 import { ColorModeContext, tokens } from "../../theme";
+
 // import LightModeOutlinedIcon from "@mui/material/Icons-material/LightModeOutlinedIcon";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -9,8 +10,7 @@ function Navbar() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
-  console.log(colorMode);
-  console.log(colors);
+
   return (
     <Box>
       <IconButton onClick={colorMode.toggleColorMode}>

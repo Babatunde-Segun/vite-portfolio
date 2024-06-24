@@ -6,7 +6,8 @@
 }
 
 .home-primary-header span {
-  color: orangered;
+  color: #ff4500;
+  /* color: orangered; */
 }
 
 .home-main-content {

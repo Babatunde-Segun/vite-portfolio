@@ -19,7 +19,7 @@ function App() {
         <CssBaseline />
 
         <div className="app">
-          <Navbar />
+          {/* <Navbar /> */}
           <Nav />
           <SideBar />
           <main className="main">

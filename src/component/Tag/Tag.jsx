@@ -3,6 +3,7 @@ import classes from "./Tag.module.css";
 import { PiStarFourFill } from "react-icons/pi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variant";
+const colors = tokens(theme.palette.mode);
 
 function Tag({ children, width = "7rem" }) {
   return (

@@ -6,6 +6,28 @@ import { createTheme } from "@mui/material/styles";
 export const tokens = (mode) => ({
   ...(mode === "dark"
     ? {
+        white: {
+          100: "#ffffff",
+          200: "#ffffff",
+          300: "#ffffff",
+          400: "#ffffff",
+          500: "#ffffff",
+          600: "#cccccc",
+          700: "#999999",
+          800: "#666666",
+          900: "#333333",
+        },
+        orange: {
+          100: "#ffdacc",
+          200: "#ffb599",
+          300: "#ff8f66",
+          400: "#ff6a33",
+          500: "#ff4500",
+          600: "#cc3700",
+          700: "#992900",
+          800: "#661c00",
+          900: "#330e00",
+        },
         grey: {
           100: "#e0e0e0",
           200: "#c2c2c2",
@@ -118,6 +140,28 @@ export const tokens = (mode) => ({
           800: "#c2d0fd",
           900: "#e1e7fe",
         },
+        orange: {
+          100: "#330e00",
+          200: "#661c00",
+          300: "#992900",
+          400: "#cc3700",
+          500: "#ff4500",
+          600: "#ff6a33",
+          700: "#ff8f66",
+          800: "#ffb599",
+          900: "#ffdacc",
+        },
+        white: {
+          100: "#333333",
+          200: "#666666",
+          300: "#999999",
+          400: "#cccccc",
+          500: "#ffffff",
+          600: "#ffffff",
+          700: "#ffffff",
+          800: "#ffffff",
+          900: "#ffffff",
+        },
       }),
 });
 
@@ -158,7 +202,7 @@ export const themeSettings = (mode) => {
               light: colors.grey[100],
             },
             background: {
-              default: colors.blueAccent[700],
+              default: colors.blueAccent[900],
             },
           }),
     },
