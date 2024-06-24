@@ -12,7 +12,7 @@ const mockElement = {
 
 const preferDarkQuery = "(prefers-color-scheme: dark)";
 
-const initialize = (storageKey, storageProvider, glbl = global) => {
+const initialize = (storageKey, storageProvider, glbl = window) => {
   const usePersistedDarkModeState = storageKey
     ? createPersistedState(storageKey, storageProvider)
     : useState;

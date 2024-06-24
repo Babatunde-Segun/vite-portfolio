@@ -158,7 +158,7 @@ export const themeSettings = (mode) => {
               light: colors.grey[100],
             },
             background: {
-              default: "#fcfcfc",
+              default: colors.blueAccent[700],
             },
           }),
     },
@@ -198,14 +198,39 @@ export const ColorModeContext = createContext({
   toggleColorMode: () => {},
 });
 
-export const useMode = () => {
-  const [mode, setMode] = useState("dark");
+// export const useMode = () => {
+//   const [mode, setMode] = useState("dark");
 
-  const colorMode = useMemo(() => ({
-    toggleColorMode: () =>
-      setMode((prev) => (prev === "light" ? "dark" : "light")),
-  }));
+//   const colorMode = useMemo(() => ({
+//     toggleColorMode: () =>
+//       setMode((prev) => (prev === "light" ? "dark" : "light")),
+//   }));
+
+//   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+//   return [theme, colorMode];
+// };
+
+export const useMode = () => {
+  const [mode, setMode] = useState(() => {
+    // Get initial mode from localStorage, default to "dark" if not found
+    const savedMode = localStorage.getItem("colorMode");
+    return savedMode ? savedMode : "dark";
+  });
+
+  const colorMode = useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => {
+          const newMode = prevMode === "light" ? "dark" : "light";
+          localStorage.setItem("colorMode", newMode);
+          return newMode;
+        });
+      },
+    }),
+    []
+  );
 
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+
   return [theme, colorMode];
 };
