@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import Navbar from "./NavbarThing/NavbarContainer";
 // console.log(Link);
 
 import {
@@ -17,6 +18,7 @@ export const navData = [
   { name: "about", path: "#about", icon: <FaUser /> },
   { name: "resume", path: "#resume", icon: <FaFileAlt /> },
   { name: "contact", path: "#contact", icon: <FaEnvelope /> },
+  { name: "theme", icon: <Navbar /> },
 ];
 
 const Nav = () => {

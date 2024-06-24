@@ -12,7 +12,7 @@ function Navbar() {
   console.log(colorMode);
   console.log(colors);
   return (
-    <Box display="flex" position="fixed" top="1rem" right="2rem" zIndex="100">
+    <Box>
       <IconButton onClick={colorMode.toggleColorMode}>
         {theme.palette.mode === "dark" ? (
           <DarkModeOutlinedIcon />

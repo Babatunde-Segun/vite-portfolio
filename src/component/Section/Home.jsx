@@ -70,7 +70,15 @@ function Home() {
 
               <div className="sidebar-button-container">
                 <Button color="white" backgroundColor="orangered">
-                  <a download={Cv} href={Cv}>
+                  <a
+                    download={Cv}
+                    href={Cv}
+                    style={{
+                      display: "flex",
+                      gap: "5px",
+                      alignItems: "center",
+                    }}
+                  >
                     Download Cv
                     <LiaDownloadSolid />
                   </a>
