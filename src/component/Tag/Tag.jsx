@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Tag.module.css";
 import { PiStarFourFill } from "react-icons/pi";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { fadeIn } from "../variant";
 import { Box, IconButton, useTheme } from "@mui/material";
 import { ColorModeContext, tokens } from "../../theme";
@@ -21,8 +21,14 @@ function Tag({ children, width = "7rem" }) {
       className={classes.tag}
       style={{
         width: `${width}`,
-        color: colors.orange[600],
-        backgroundColor: colors.grey[700],
+        color:
+          theme.palette.mode === "dark"
+            ? colors.orange[600]
+            : colors.white[900],
+        backgroundColor:
+          theme.palette.mode === "dark"
+            ? colors.white[900]
+            : colors.orange[600],
       }}
     >
       <PiStarFourFill />

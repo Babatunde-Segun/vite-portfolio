@@ -12,6 +12,10 @@ import segun from "../../assets/segun.jpg";
 import { fadeIn } from "../variant";
 import { motion } from "framer-motion";
 
+import { Box, IconButton, useTheme } from "@mui/material";
+import { ColorModeContext, tokens } from "../../theme";
+import { useContext } from "react";
+
 const toolsArray = [
   {
     img: reactlogo,
@@ -36,6 +40,8 @@ const toolsArray = [
 ];
 
 function Resume() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   return (
     <motion.section
       variants={fadeIn()}
@@ -53,13 +59,40 @@ function Resume() {
       </h2>
 
       {/* education section */}
-      <h3 className="resume-tertiary-heading">My Education</h3>
+      <h3
+        className="resume-tertiary-heading"
+        style={{
+          color: colors.grey[200],
 
-      <div className="resume-flex-container">
+          // background:
+          //   theme.palette.mode === "dark" ? "" : colors.blueAccent[100],
+        }}
+      >
+        My Education
+      </h3>
+
+      <div
+        className="resume-flex-container"
+        style={{
+          borderColor:
+            theme.palette.mode === "dark"
+              ? colors.grey[100]
+              : colors.blueAccent[200],
+        }}
+      >
         <div className="resume-flex-container-date">2017 - 2023</div>
 
         <div className="resume-flex-container-course">
-          <h3>B.Sc Physics</h3>
+          <h3
+            style={{
+              color:
+                theme.palette.mode === "dark"
+                  ? colors.grey[100]
+                  : colors.blueAccent[100],
+            }}
+          >
+            B.Sc Physics
+          </h3>
           <p>University of Ibadan, Ibadan, Nigeria</p>
         </div>
 
@@ -82,11 +115,28 @@ function Resume() {
         Work Experience
       </h3>
 
-      <div className="resume-flex-container">
+      <div
+        className="resume-flex-container"
+        style={{
+          borderColor:
+            theme.palette.mode === "dark"
+              ? colors.grey[100]
+              : colors.blueAccent[200],
+        }}
+      >
         <div className="resume-flex-container-date">2024 - current</div>
 
         <div className="resume-flex-container-course">
-          <h3>Frontend Developer </h3>
+          <h3
+            style={{
+              color:
+                theme.palette.mode === "dark"
+                  ? colors.grey[100]
+                  : colors.blueAccent[100],
+            }}
+          >
+            Frontend Developer{" "}
+          </h3>
           <p>Freelancer</p>
         </div>
 
@@ -113,7 +163,16 @@ function Resume() {
           className="resume-tool-container"
         >
           {toolsArray.map((tool, index) => (
-            <div key={index} className="resume-tool-subcontainer">
+            <div
+              key={index}
+              className="resume-tool-subcontainer"
+              style={{
+                borderColor:
+                  theme.palette.mode === "dark"
+                    ? colors.grey[100]
+                    : colors.blueAccent[100],
+              }}
+            >
               <motion.img
                 variants={{
                   hidden: { opacity: 0, scale: 0.5 },
