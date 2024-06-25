@@ -4,6 +4,9 @@ import "./About.css";
 import { Button } from "@nextui-org/react";
 import { LiaDownloadSolid } from "react-icons/lia";
 import Cv from "../../assets/Resume.pdf";
+import { Box, IconButton, useTheme } from "@mui/material";
+import { ColorModeContext, tokens } from "../theme";
+import { useContext } from "react";
 
 const aboutArray = [
   {
@@ -19,6 +22,8 @@ const aboutArray = [
 ];
 
 function About() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   return (
     <section id="about">
       <Tag>About Me</Tag>
@@ -85,7 +90,16 @@ function About() {
               {items.tags.length === 0
                 ? ""
                 : items.tags.map((tag, tagIndex) => (
-                    <p key={tagIndex} className="about-tag">
+                    <p
+                      key={tagIndex}
+                      className="about-tag"
+                      style={{
+                        color:
+                          theme.palette.mode === "dark"
+                            ? colors.grey[100]
+                            : colors.blueAccent[200],
+                      }}
+                    >
                       {tag}
                     </p>
                   ))}

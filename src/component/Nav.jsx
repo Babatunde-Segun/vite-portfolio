@@ -11,6 +11,10 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
+import { useContext } from "react";
+import { Box, IconButton, useTheme } from "@mui/material";
+import { ColorModeContext, tokens } from "../theme";
+
 // Navigation data
 export const navData = [
   { name: "home", path: "#home", icon: <FaHome /> },
@@ -22,6 +26,9 @@ export const navData = [
 ];
 
 const Nav = () => {
+  const colorMode = useContext(ColorModeContext);
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const [activeSection, setActiveSection] = useState("");
   const activeSectionRef = useRef("");
 
@@ -79,14 +86,20 @@ const Nav = () => {
 
   return (
     <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
-      <div className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[90px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-xl  md:text-2xl  xl:rounded-full">
+      <div
+        style={{
+          backgroundColor:
+            theme.palette.mode === "dark" ? "" : colors.grey[800],
+        }}
+        className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[90px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-xl  md:text-2xl  xl:rounded-full"
+      >
         {navData.map((link, index) => (
           <a
             key={index}
             href={link.path}
             className={`${
               `#${activeSection}` === link.path
-                ? { backgroundColor: "orangered" }
+                ? { backgroundColor: colors.white[900] }
                 : ""
             } relative flex items-center group hover:text-accent transition-all duration-300 cursor-pointer`}
           >
