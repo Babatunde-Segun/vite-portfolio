@@ -9,6 +9,7 @@ import githubfinder from "../../assets/githhubfinder-dark-mode.png";
 import nextfoodfullscreen from "../../assets/nextfoodfullscreen.png";
 import housemarketdesktop from "../../assets/housemarketdesktopview.png";
 import supportDesk from "../../assets/support-deskdesktop.png";
+import aiPortfolio from "../../assets/AI-portfolio.png";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import { fadeIn } from "../variant";
@@ -20,28 +21,40 @@ import { ColorModeContext, tokens } from "../../theme";
 
 const portfolioArray = [
   {
-    name: "title 4",
+    name: "Food community",
     href: "https://nextjs-food-project.vercel.app/",
     src: nextfoodfullscreen,
-    tags: ["NextJS"],
+    tags: ["Next-level-food", "NextJS"],
   },
   {
-    name: "title 1",
+    name: "AI-portfolio",
+    href: "https://ej16.my.canva.site/babatundesegun-ai-portfolio",
+    src: aiPortfolio,
+    tags: ["AI portfolio", "AI"],
+  },
+  {
+    name: "Housemarket",
     src: housemarketdesktop,
     href: "https://house-marketplace-hzo0.onrender.com/",
-    tags: ["node", "React"],
+    tags: ["House-market-app", "React"],
   },
   {
-    name: "title 2",
+    name: "Github-finder",
     href: "https://github-finder-alpha-six.vercel.app/",
     src: githubfinder,
-    tags: ["node", "JavaScript"],
+    tags: ["Github-finder", "React"],
+  },
+  {
+    href: "https://support-ticket-desk.onrender.com/",
+    name: "Support-desk",
+    src: supportDesk,
+    tags: ["Support-system-app", "React"],
   },
   {
     href: "https://todo-app-fmge.onrender.com/",
-    name: "title 3",
-    src: supportDesk,
-    tags: ["react", "NextJS", "typescript"],
+    name: "feedback-app",
+    src: feedbackapp,
+    tags: ["feedback-app", "React"],
   },
 ];
 
