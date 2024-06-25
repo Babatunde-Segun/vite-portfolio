@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/react";
 import { LiaDownloadSolid } from "react-icons/lia";
 import Cv from "../../assets/Resume.pdf";
 import { Box, IconButton, useTheme } from "@mui/material";
-import { ColorModeContext, tokens } from "../theme";
+import { ColorModeContext, tokens } from "../../theme";
 import { useContext } from "react";
 
 const aboutArray = [
@@ -82,8 +82,28 @@ function About() {
 
       <div className="about-array">
         {aboutArray.map((items, index) => (
-          <div className="about-array-container" key={index}>
-            <h2 className="secondary-heading about-array-secondary-heading">
+          <div
+            className="about-array-container"
+            key={index}
+            style={{
+              borderColor:
+                theme.palette.mode === "dark"
+                  ? colors.grey[100]
+                  : colors.blueAccent[200],
+
+              background:
+                theme.palette.mode === "dark" ? "" : colors.blueAccent[900],
+            }}
+          >
+            <h2
+              className="secondary-heading about-array-secondary-heading"
+              style={{
+                color:
+                  theme.palette.mode === "dark"
+                    ? colors.orange[600]
+                    : colors.orange[400],
+              }}
+            >
               {items.h2}
             </h2>
             <div className="about-tags-containers">
@@ -98,6 +118,10 @@ function About() {
                           theme.palette.mode === "dark"
                             ? colors.grey[100]
                             : colors.blueAccent[200],
+                        background:
+                          theme.palette.mode === "dark"
+                            ? colors.grey[500]
+                            : colors.blueAccent[700],
                       }}
                     >
                       {tag}
