@@ -14,6 +14,10 @@ import { Link } from "react-router-dom";
 import { fadeIn } from "../variant";
 import { AnimatePresence, motion } from "framer-motion";
 
+import { useContext } from "react";
+import { Box, IconButton, useTheme } from "@mui/material";
+import { ColorModeContext, tokens } from "../../theme";
+
 const portfolioArray = [
   {
     name: "title 4",
@@ -42,6 +46,9 @@ const portfolioArray = [
 ];
 
 function Portfolio() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const colorMode = useContext(ColorModeContext);
   return (
     <section id="portfolio" className="portfolio">
       <Tag>Portfolio</Tag>
@@ -88,6 +95,10 @@ function Portfolio() {
                     ? ""
                     : items.tags.map((tag, tagIndex) => (
                         <motion.p
+                          style={{
+                            color: colors.redAccent[400],
+                            background: colors.white[400],
+                          }}
                           key={tagIndex}
                           className="portfolio-img-details"
                         >
