@@ -96,8 +96,8 @@ function Portfolio() {
                     : items.tags.map((tag, tagIndex) => (
                         <motion.p
                           style={{
-                            color: colors.redAccent[400],
-                            background: colors.white[400],
+                            color: colors.redAccent[100],
+                            background: colors.blueAccent[800],
                           }}
                           key={tagIndex}
                           className="portfolio-img-details"
