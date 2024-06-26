@@ -76,7 +76,7 @@ function Footer() {
         <h4>Email</h4>
         <p>
           <a href="mailto:babatundesegun123@gmail.com">
-            Babatundesegun123e@gmail.com
+            Babatundesegun123@gmail.com
           </a>
         </p>
       </div>
