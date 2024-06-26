@@ -8,6 +8,7 @@ import CountUp from "react-countup";
 import picture from "../../assets/portrait.avif";
 import segun from "../../assets/segun.jpg";
 import Cv from "../../assets/Resume.pdf";
+import { Link } from "react-router-dom";
 
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -27,8 +28,7 @@ function Home() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
-  console.log(colorMode);
-  console.log(colors.orange);
+
   return (
     <section id="home">
       {/* <Navbar /> */}
@@ -133,7 +133,7 @@ function Home() {
 
       <div className="home-main-content">
         <div>
-          <Tag>Let's talk</Tag>
+          <Tag>Home</Tag>
           <div>
             <motion.h1
               variants={fadeIn()}
@@ -163,12 +163,27 @@ function Home() {
           </AnimatePresence>
 
           <div className="home-btn-container">
-            <Button width="10rem">My Works</Button>
-            <Button width="10rem">
-              <a download={Cv} href={Cv}>
-                CV
-              </a>
-            </Button>
+            <a href="#contact">
+              <Button
+                width="10rem"
+                color={
+                  theme.palette.mode === "dark"
+                    ? colors.orange[300]
+                    : colors.blueAccent[800]
+                }
+              >
+                Let's talk
+              </Button>
+            </a>
+            <a
+              onClick={() => {
+                window.confirm("you want to download my Resume");
+              }}
+              download={Cv}
+              href={Cv}
+            >
+              <Button width="10rem">CV</Button>
+            </a>
           </div>
         </div>
 

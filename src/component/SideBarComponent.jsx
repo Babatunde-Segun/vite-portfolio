@@ -72,7 +72,9 @@ export default function SideBarComponent() {
       </div>
 
       <div className="sidebar-button-container">
-        <Button>Let's talk</Button>
+        <a href="#about">
+          <Button>About Me</Button>
+        </a>
       </div>
     </div>
   );

@@ -10,12 +10,14 @@ function Button({
   width = "100%",
   color = "aqua",
   backgroundColor = "",
+  href = "",
 }) {
   const colorMode = useContext(ColorModeContext);
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
     <div
+      href={href}
       className={classes.btn}
       style={{
         width: `${width}`,
