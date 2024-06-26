@@ -106,6 +106,9 @@ function Home() {
                   backgroundColor={colors.orange[500]}
                 >
                   <a
+                    onClick={() => {
+                      window.alert("you want to download my Resume");
+                    }}
                     download={Cv}
                     href={Cv}
                     style={{

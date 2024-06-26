@@ -46,6 +46,9 @@ function About() {
           </p>
           <Button>
             <a
+              onClick={() => {
+                window.alert("you want to download my Resume");
+              }}
               style={{
                 display: "flex",
                 alignItems: "center",
