@@ -56,6 +56,10 @@ function Home() {
                 // }`,
 
                 color: colors.orange[600],
+                textShadow:
+                  theme.palette.mode === "dark"
+                    ? `0 5px 5px  ${colors.blueAccent[800]}, 10px 15px 100px  ${colors.grey[900]}`
+                    : `0 3px 7px  ${colors.white[100]},  4px 4px 100px  ${colors.grey[900]}`,
               }}
             >
               Developer
@@ -138,7 +142,18 @@ function Home() {
               exit="remove"
               className="home-primary-header"
             >
-              I'm Babatunde Segun <br />A Software <span>Developer</span>
+              I'm Babatunde Segun <br />A Software{" "}
+              <span
+                style={{
+                  color: colors.orange[600],
+                  textShadow:
+                    theme.palette.mode === "dark"
+                      ? `0 5px 5px  ${colors.blueAccent[800]}, 10px 15px 10px  ${colors.grey[900]}`
+                      : `0 3px 7px  ${colors.white[100]},  4px 4px 100px  ${colors.grey[900]}`,
+                }}
+              >
+                Developer
+              </span>
             </motion.h1>
           </div>
 

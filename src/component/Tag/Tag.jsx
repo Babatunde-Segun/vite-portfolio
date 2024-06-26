@@ -29,6 +29,10 @@ function Tag({ children, width = "7rem" }) {
           theme.palette.mode === "dark"
             ? colors.white[900]
             : colors.orange[600],
+        boxShadow:
+          theme.palette.mode === "dark"
+            ? ` 1px 0 1px  ${colors.blueAccent[800]},  1px 1px 1px  ${colors.grey[900]}`
+            : ` 1px 0 1px  ${colors.white[800]},  1px 1px 1px  ${colors.grey[900]}`,
       }}
     >
       <PiStarFourFill />
