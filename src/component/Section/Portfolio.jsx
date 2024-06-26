@@ -10,6 +10,7 @@ import nextfoodfullscreen from "../../assets/nextfoodfullscreen.png";
 import housemarketdesktop from "../../assets/housemarketdesktopview.png";
 import supportDesk from "../../assets/support-deskdesktop.png";
 import aiPortfolio from "../../assets/AI-portfolio.png";
+import todoApp from "../../assets/todoapp.png";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import { fadeIn } from "../variant";
@@ -44,17 +45,23 @@ const portfolioArray = [
     src: githubfinder,
     tags: ["Github-finder", "React"],
   },
-  {
-    href: "https://support-ticket-desk.onrender.com/",
-    name: "Support-desk",
-    src: supportDesk,
-    tags: ["Support-system-app", "React"],
-  },
+  // {
+  //   href: "https://support-ticket-desk.onrender.com/",
+  //   name: "Support-desk",
+  //   src: supportDesk,
+  //   tags: ["Support-system-app", "React"],
+  // },
   {
     href: "https://todo-app-fmge.onrender.com/",
     name: "feedback-app",
+    src: todoApp,
+    tags: ["Todo-app", "typescript"],
+  },
+  {
+    href: "https://give-feedback-app.onrender.com/",
+    name: "feedback-app",
     src: feedbackapp,
-    tags: ["feedback-app", "React"],
+    tags: ["Todo-app", "typescript"],
   },
 ];
 
