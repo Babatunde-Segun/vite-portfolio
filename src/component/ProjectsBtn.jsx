@@ -6,6 +6,7 @@
 import { Link } from "react-router-dom";
 // import bgStar from "../assets/circleStar.svg";
 import roundedText from "../assets/rounded-text.png";
+import roundedText1 from "../assets/rounded-text-fotor.png";
 import projectText from "../assets/project.png";
 
 // icons
@@ -33,19 +34,24 @@ const ProjectsBtn = () => {
         {theme.palette.mode === "light" && (
           <>
             <img
-              src={projectText}
+              src={roundedText1}
               alt=""
               className="projectBtn  max-w-[100px] max-h-[108px]"
             />
             <HiArrowLongDown className="absolute text-4xl group-hover:translate-y-2 transition-all duration-300 ease" />
           </>
         )}
-        <img
-          src={roundedText}
-          alt=""
-          className="projectBtn  max-w-[100px] max-h-[108px]"
-        />
-        <HiArrowLongDown className="absolute text-4xl group-hover:translate-y-2 transition-all duration-300 ease" />
+
+        {theme.palette.mode === "dark" && (
+          <>
+            <img
+              src={roundedText}
+              alt=""
+              className="projectBtn  max-w-[100px] max-h-[108px]"
+            />
+            <HiArrowLongDown className="absolute text-4xl group-hover:translate-y-2 transition-all duration-300 ease" />
+          </>
+        )}
       </div>
     </a>
   );
