@@ -48,7 +48,7 @@ const Nav = () => {
             activeSectionRef.current = entry.target.id;
             const allNavLink = document.querySelectorAll("nav a");
 
-            console.log(allNavLink);
+            // console.log(allNavLink);
 
             document.querySelectorAll("nav a").forEach((link) => {
               link.classList.remove("activeBackGrd");
@@ -56,7 +56,7 @@ const Nav = () => {
               link.getAttribute("href") === `#${entry.target.id}`
                 ? link.classList.add("activeBackGrd")
                 : "";
-              console.log(link.getAttribute("href"));
+              // console.log(link.getAttribute("href"));
 
               // link.classList.toggle(
               //   "text-accent",
