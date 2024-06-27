@@ -39,7 +39,6 @@ function App() {
               <About />
               <Resume />
               <Contact />
-              <Loader />
             </main>
           </div>
         )}

@@ -61,7 +61,7 @@ const portfolioArray = [
     href: "https://give-feedback-app.onrender.com/",
     name: "feedback-app",
     src: feedbackapp,
-    tags: ["Todo-app", "typescript"],
+    tags: ["Feedback app", "react"],
   },
 ];
 
