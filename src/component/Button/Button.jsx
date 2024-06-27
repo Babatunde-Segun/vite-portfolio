@@ -30,6 +30,9 @@ function Button({
           theme.palette.mode === "dark"
             ? `0 5px 5px  ${colors.blueAccent[800]},  10px 15px 10px  ${colors.grey[900]}`
             : `0 5px 5px  ${colors.white[100]},  10px 15px 10px  ${colors.grey[900]}`,
+        display: "flex",
+        gap: "10px",
+        alignItems: "center",
       }}
     >
       {children}

@@ -180,12 +180,15 @@ function Home() {
             </a>
             <a
               onClick={() => {
-                window.confirm("you want to download my Resume");
+                window.alert("you want to download my Resume");
               }}
               download={Cv}
               href={Cv}
             >
-              <Button width="10rem">CV</Button>
+              <Button width="10rem">
+                Resume
+                <LiaDownloadSolid />
+              </Button>
             </a>
           </div>
         </div>
