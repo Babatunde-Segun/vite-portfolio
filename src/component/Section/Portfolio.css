@@ -43,6 +43,7 @@
   bottom: 2%;
   left: 1%;
   margin-top: -2rem;
+  max-height: 2rem;
 }
 
 .portfolio-details-subcontainer {
@@ -66,5 +67,19 @@
   .portfolio-array {
     row-gap: 0;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+
+  .portfolio-img-container {
+    max-height: 20rem;
+  }
+
+  .portfolio-img-container {
+    /* max-height: 10rem; */
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolio-array {
+    max-height: 30rem;
   }
 }
