@@ -23,6 +23,7 @@
 }
 
 .portfolio-img-container {
+  display: block;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -72,14 +73,11 @@
   .portfolio-img-container {
     max-height: 20rem;
   }
-
-  .portfolio-img-container {
-    /* max-height: 10rem; */
-  }
 }
 
 @media (max-width: 500px) {
-  .portfolio-array {
-    max-height: 30rem;
+  .portfolio-img-container {
+    /* max-height: 30rem; */
+    max-height: fit-content;
   }
 }
