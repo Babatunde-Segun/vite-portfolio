@@ -20,18 +20,20 @@
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   /* place-items: center; */
   max-width: 60rem;
+  max-height: fit-content;
 }
 
 .portfolio-img-container {
   display: block;
   width: 100%;
-  height: max-content;
+  /* height: 100%; */
   position: relative;
   overflow: hidden;
   margin-bottom: 4rem;
 }
 .portfolio-img {
   height: 100%;
+  object-fit: cover;
   transition: transform ease 0.3s;
 }
 
