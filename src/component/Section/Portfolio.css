@@ -1,6 +1,6 @@
 #portfolio {
   /* scroll-behavior: smooth; */
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 .portfolio {
@@ -25,6 +25,7 @@
 .portfolio-img-container {
   display: block;
   width: 100%;
+  max-height: 100%;
   position: relative;
   overflow: hidden;
   margin-bottom: 4rem;
