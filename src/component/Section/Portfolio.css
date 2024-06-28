@@ -20,7 +20,7 @@
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   /* place-items: center; */
   max-width: 60rem;
-  max-height: fit-content;
+  /* max-height: fit-content; */
 }
 
 .portfolio-img-container {
@@ -33,7 +33,7 @@
 }
 .portfolio-img {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform ease 0.3s;
 }
 
@@ -75,12 +75,5 @@
 
   .portfolio-img-container {
     max-height: 20rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .portfolio-img-container {
-    /* max-height: 30rem; */
-    max-height: fit-content;
   }
 }
