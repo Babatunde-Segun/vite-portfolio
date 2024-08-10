@@ -37,6 +37,7 @@ const ProjectsBtn = () => {
               src={roundedText1}
               alt=""
               className="projectBtn  max-w-[100px] max-h-[108px]"
+              loading="lazy"
             />
             <HiArrowLongDown className="absolute text-4xl group-hover:translate-y-2 transition-all duration-300 ease" />
           </>
@@ -45,6 +46,7 @@ const ProjectsBtn = () => {
         {theme.palette.mode === "dark" && (
           <>
             <img
+            loading="lazy"
               src={roundedText}
               alt=""
               className="projectBtn  max-w-[100px] max-h-[108px]"

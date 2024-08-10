@@ -94,6 +94,7 @@ export function Resume() {
                 src={tool.img}
                 alt={tool.title}
                 className="tool-img"
+                loading="lazy"
               />
               <p className="tool-details">{tool.title}</p>
             </div>

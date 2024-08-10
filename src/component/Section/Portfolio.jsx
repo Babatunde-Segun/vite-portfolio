@@ -11,6 +11,8 @@ import housemarketdesktop from "../../assets/housemarketdesktopview.png";
 import supportDesk from "../../assets/support-deskdesktop.png";
 import aiPortfolio from "../../assets/AI-portfolio.png";
 import todoApp from "../../assets/todoapp.png";
+
+import crytpoPay from "../../assets/cryptoPay.png";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import { fadeIn } from "../variant";
@@ -21,6 +23,12 @@ import { Box, IconButton, useTheme } from "@mui/material";
 import { ColorModeContext, tokens } from "../../theme";
 
 const portfolioArray = [
+  {
+    name: "Cryto Pay",
+    href: "https://crypto-e2xxytpq9-babatund-seguns-projects-5956ffd0.vercel.app/",
+    src: crytpoPay,
+    tags: ["Crypto currency", "React"],
+  },
   {
     name: "Food community",
     href: "https://nextjs-food-project.vercel.app/",
@@ -108,6 +116,7 @@ function Portfolio() {
                 src={items.src}
                 alt={items.name}
                 className="portfolio-img"
+                loading="lazy"
               />
               <div className="portfolio-details-container">
                 <div className="portfolio-details-subcontainer">

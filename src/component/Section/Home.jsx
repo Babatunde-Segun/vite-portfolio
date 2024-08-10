@@ -130,7 +130,12 @@ function Home() {
           </div>
         </div>
         <div className="home-introduction-img-container">
-          <img src={segun} alt="picture" className="home-introduction-img" />
+          <img
+            src={segun}
+            alt="picture"
+            className="home-introduction-img"
+            loading="lazy"
+          />
         </div>
       </div>
 

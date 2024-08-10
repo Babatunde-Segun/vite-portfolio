@@ -43,7 +43,7 @@ export default function SideBarComponent() {
     <div className="sidebar">
       <h2 className="sidebar-heading-secondary">Babatunde Segun</h2>
       <div className="sidebar-img-container">
-        <img className="sidebar-img" src={segun} alt="portfolio picture" />
+        <img className="sidebar-img" src={segun} alt="portfolio picture" loading="lazy" />
       </div>
 
       <div className="detail-holding-container">
