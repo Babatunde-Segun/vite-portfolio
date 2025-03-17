@@ -15,7 +15,7 @@ function CountupComponent() {
         <div className="flex gap-1">
           <CountUp
             start={0}
-            end={2}
+            end={3}
             delay={3}
             duration={5}
             className="text-[3rem] font-[700] mb-[0.2rem] sm:mb-[1rem]"
